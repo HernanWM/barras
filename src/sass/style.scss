@@ -8,6 +8,10 @@ $myColor: #a9704a;
   font-family: 'Poppins', sans-serif;
 }
 
+.sticky {
+  position: sticky;
+}
+
 html,
 body {
   position: relative;
@@ -178,7 +182,7 @@ body {
   }
 
   .contacto {
-    background-color: #a9704a;
+    background-color: #a9704acf;
     margin-top: 100px;
     padding: 40px;
 
@@ -192,11 +196,40 @@ body {
         width: 100%;
         height: 100%;
         border-radius: 203px;
-        filter: drop-shadow(0px 0px 9px rgba(0,0,0, 0.2));
+        filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.2));
         transition: all 0.2s ease;
-        &:hover{
-          filter: drop-shadow(0px 0px 15px rgba(0,0,0, 0.5));
+
+        &:hover {
+          filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
           margin-top: -2px;
+        }
+      }
+    }
+
+    .contacto_item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 28px;
+      }
+
+      .box_links {
+        a {
+          color: #000;
+          font-weight: 500;
+          text-decoration: none;
+          border: 2px solid #000;
+          border-radius: 25px;
+          padding: 6px 12px;
+          transition: all .3s ease-in-out;
+          &:hover{
+            border: 2px solid #a9704a;
+            background-color: #a9704a;
+            fill: #a9704a;
+          }
         }
       }
     }
@@ -306,4 +339,16 @@ body {
     width: 60%;
     justify-content: space-around;
   }
+}
+
+//ajustes de bootstrap
+
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #a9704acf;
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url(/img/flecha-img.svg);
+  transform: rotate(-180deg);
 }

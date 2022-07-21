@@ -3,6 +3,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.sticky {
+  position: sticky;
+}
+
 html,
 body {
   position: relative;
@@ -142,7 +146,7 @@ body .quienes_somos .somos_container .somos_box .gallery_img-2 {
   }
 }
 body .contacto {
-  background-color: #a9704a;
+  background-color: rgba(169, 112, 74, 0.8117647059);
   margin-top: 100px;
   padding: 40px;
 }
@@ -162,6 +166,30 @@ body .contacto .box_img img {
 body .contacto .box_img img:hover {
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
   margin-top: -2px;
+}
+body .contacto .contacto_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .contacto .contacto_item span {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 28px;
+}
+body .contacto .contacto_item .box_links a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding: 6px 12px;
+  transition: all 0.3s ease-in-out;
+}
+body .contacto .contacto_item .box_links a:hover {
+  border: 2px solid #a9704a;
+  background-color: #a9704a;
+  fill: #a9704a;
 }
 body footer {
   min-height: 300px;
@@ -249,4 +277,14 @@ body .navbar-brand span {
     width: 60%;
     justify-content: space-around;
   }
+}
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: rgba(169, 112, 74, 0.8117647059);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.13);
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(/img/flecha-img.svg);
+  transform: rotate(-180deg);
 }
